@@ -1,7 +1,7 @@
 'use strict'
 
 let path = require('path')
-let Quark = require('proton-hook')
+let Quark = require('proton-quark')
 let _ = require('lodash')
 
 module.exports = class ConfigQuark extends Quark {
