@@ -23,12 +23,18 @@ class ConfigQuark extends Quark {
    * @author Luis Hernandez
    */
   configure() {
-    if (!this.proton.app.config)
-      this.proton.app.config = {}
+    return new Promise(resolve => {
+      if (!this.proton.app.config)
+        this.proton.app.config = {}
+      resolve()
+    })
   }
 
   initialize() {
-    this.proton.app.config = this._configurations
+    return new Promise(resolve => {
+      this.proton.app.config = this._configurations
+      resolve()
+    })
   }
 
 
